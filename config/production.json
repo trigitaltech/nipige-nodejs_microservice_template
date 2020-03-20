@@ -1,4 +1,5 @@
 {
   "port": 8080,
-  "log_level": "info"
+  "log_level": "info",
+  "mongodb_config": "mongodb://example.com:27017/microdb"
 }
