@@ -6,7 +6,7 @@
   "author": "Suraj Tiwari",
   "license": "MIT",
   "scripts": {
-    "compile": "make",
+    "compile": "make lib",
     "start": "make devserver",
     "dockerimage": "make dockerimage",
     "dockerrun": "make dockerrun",
