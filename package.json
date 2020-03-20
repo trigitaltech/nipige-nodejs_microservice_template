@@ -18,13 +18,14 @@
     "config": "^3.3.0",
     "koa": "^2.11.0",
     "koa-body": "^4.1.1",
-    "koa-router": "^8.0.8",
+    "koa-joi-router": "^6.0.2",
     "mongoose": "^5.9.5"
   },
   "devDependencies": {
     "@types/bunyan": "^1.8.6",
     "@types/config": "^0.0.36",
     "@types/koa": "^2.11.2",
+    "@types/koa-joi-router": "^5.2.3",
     "@types/koa-router": "^7.4.0",
     "@types/koa__cors": "^3.0.1",
     "@types/mongoose": "^5.7.6",
