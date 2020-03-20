@@ -1,0 +1,6 @@
+{
+  "port": 4002,
+  "name": "microservice",
+  "log_level": "debug",
+  "log_output": "stdout"
+}
