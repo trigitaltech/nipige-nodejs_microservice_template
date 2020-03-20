@@ -8,8 +8,8 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/Suraj-Tiwari/nodejs-microservice-template/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/Suraj-Tiwari/nodejs-microservice-template/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/Suraj-Tiwari/nodejs-microservice-template.svg)](https://github.com/Suraj-Tiwari/nodejs-microservice-template/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Suraj-Tiwari/nodejs-microservice-template.svg)](https://github.com/Suraj-Tiwari/nodejs-microservice-template/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
