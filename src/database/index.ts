@@ -11,6 +11,6 @@ export default async () => {
     });
     logger.info('Database Connected');
   } catch (err) {
-    logger.info('Error Connecting database');
+    logger.error('Error Connecting database');
   }
 };
