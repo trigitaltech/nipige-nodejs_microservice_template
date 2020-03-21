@@ -1,6 +1,6 @@
 import Koa from 'koa';
 import config from 'config';
-import { logger } from './utils/logger';
+import logger from './utils/logger';
 import routes from './routes';
 import database from './database';
 
