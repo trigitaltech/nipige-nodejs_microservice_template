@@ -13,7 +13,7 @@ if (output === 'stdout') {
   stream = { level, path: output };
 }
 
-export const logger = bunyan.createLogger({
+export default bunyan.createLogger({
   name: config.get('name'),
   streams: [stream]
 });
