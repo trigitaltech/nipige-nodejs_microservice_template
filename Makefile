@@ -6,11 +6,11 @@ SRC_FILES := $(shell find src -name '*.ts')
 all: lib
 
 lib: $(SRC_FILES) node_modules tsconfig.json
-	tsc -p tsconfig.json --outDir dist
-	VERSION="$$(node -p 'require("./package.json").version')"; \
+	@tsc -p tsconfig.json --outDir dist
+	@VERSION="$$(node -p 'require("./package.json").version')"; \
 	BUILD="$$(git rev-parse --short HEAD)-$$(date +%s)"; \
 	echo -e "Object.defineProperty(exports, \"__esModule\", { value: true });\nexports.default = '$${VERSION}-$${BUILD}';" > dist/utils/version.js
-	touch dist
+	@touch dist
 
 dockerimage:
 	@read -p "ENTER IMAGE NAME:TAG (example: hello:0.0.1) : " imagetag; docker build --rm -f Dockerfile -t $$imagetag .
