@@ -8,6 +8,9 @@ import AuthService, { AuthData } from './auth';
  *      .then(data => console.log(data))
  *      .catch(err => console.log(err));
  *
+ * let authService = new AuthService();
+ * await authService.fetch({ action: 'asdf', resource: 'asdf', roles: '' })
+ *
  */
 
 export { TestService, AuthService, AuthData };
