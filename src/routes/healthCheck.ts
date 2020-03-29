@@ -1,5 +1,5 @@
 import Router from 'koa-joi-router';
-import { healthCheck } from './../controllers/healthCheck';
+import { healthCheck } from './../controllers';
 
 const router = Router();
 
