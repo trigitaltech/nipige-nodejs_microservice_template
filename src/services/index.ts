@@ -1,5 +1,5 @@
 import TestService from './test';
-
+import AuthService, { AuthData } from './auth';
 /**
  * Usages
  * import {TestService} from './service'
@@ -10,4 +10,4 @@ import TestService from './test';
  *
  */
 
-export { TestService };
+export { TestService, AuthService, AuthData };
