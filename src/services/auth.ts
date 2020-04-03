@@ -1,10 +1,5 @@
 import Service from './service';
-
-export class AuthData {
-  roles = '';
-  resource = '';
-  action = '';
-}
+import { AuthData } from "./DataTypes";
 
 export default class AuthService extends Service {
   public async fetch(params: AuthData): Promise<any> {

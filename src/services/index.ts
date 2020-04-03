@@ -1,5 +1,6 @@
 import TestService from './test';
-import AuthService, { AuthData } from './auth';
+import AuthService from './auth';
+import { AuthData } from './DataTypes'
 /**
  * Usages
  * import {TestService} from './service'

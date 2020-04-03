@@ -13,19 +13,17 @@ export default abstract class Service {
 
   public async get(url: string): Promise<any> {
     try {
-      const result = await this.api.get(url);
-      return result;
+      return await this.api.get(url);
     } catch (err) {
-      throw 'Something went wrong';
+      throw new Error('Something went wrong');
     }
   }
 
   public async post(url: string, data: JSON): Promise<any> {
     try {
-      const result = await this.api.post(url, data);
-      return result;
+      return await this.api.post(url, data);
     } catch (err) {
-      throw 'Something went wrong';
+      throw new Error('Something went wrong');
     }
   }
 }
