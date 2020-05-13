@@ -1,3 +1,1 @@
-import pkg from '../../package.json';
-
-export default `${pkg.version}-dev`;
+export default `${new Date().getTime()}-dev`;
