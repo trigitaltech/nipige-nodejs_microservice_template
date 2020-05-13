@@ -1,9 +1,9 @@
 import Service from './service';
-import { AuthData } from "./DataTypes";
+import { AuthorizationData, AuthorizationResponse } from "./dataTypes";
 
-export default class AuthService extends Service {
-  public async fetch(params: AuthData): Promise<any> {
-    const url = `/auth/role_permission/?roles=${params.roles}&resource=${params.resource}&action=${params.action}`;
-    return await this.get(url);
+export default class AuthorizationService extends Service {
+  public async fetch(authorizationData: AuthorizationData): Promise<AuthorizationResponse> {
+    const url = `/authorization/rbac/authorize`;
+    return await this.post(url, authorizationData);
   }
 }

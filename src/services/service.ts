@@ -2,28 +2,29 @@ import axios, { AxiosInstance } from 'axios';
 import config from 'config';
 
 export default abstract class Service {
-  abstract fetch(params: any): any;
-  public api: AxiosInstance;
+    abstract fetch(params: any): any;
 
-  constructor() {
-    this.api = axios.create({
-      baseURL: config.get('service_base_url')
-    });
-  }
+    public api: AxiosInstance;
 
-  public async get(url: string): Promise<any> {
-    try {
-      return await this.api.get(url);
-    } catch (err) {
-      throw new Error('Something went wrong');
+    constructor() {
+        this.api = axios.create({
+            baseURL: config.get('service_base_url')
+        });
     }
-  }
 
-  public async post(url: string, data: JSON): Promise<any> {
-    try {
-      return await this.api.post(url, data);
-    } catch (err) {
-      throw new Error('Something went wrong');
+    public async get(url: string): Promise<any> {
+        try {
+            return await this.api.get(url);
+        } catch (err) {
+            throw new Error('Something went wrong');
+        }
     }
-  }
+
+    public async post(url: string, data: JSON | any): Promise<any> {
+        try {
+            return await this.api.post(url, data);
+        } catch (err) {
+            throw new Error('Something went wrong');
+        }
+    }
 }
