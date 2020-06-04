@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "compile": "make lib",
-    "start": "make devserver",
+    "dev": "make devserver",
+    "start": "node dist/app.js",
     "dockerimage": "make dockerimage",
     "dockerrun": "make dockerrun",
     "test": "echo \"Error: no test specified\" && exit 1"
