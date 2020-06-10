@@ -6,11 +6,12 @@
   "author": "Suraj Tiwari",
   "license": "MIT",
   "scripts": {
-    "compile": "make lib",
+    "build": "make lib",
     "dev": "make devserver",
-    "start": "node dist/app.js",
+    "start": "npm run build && node dist/app.js",
     "dockerimage": "make dockerimage",
     "dockerrun": "make dockerrun",
+    "lint": "npx prettier --write 'src/**/*.ts'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -32,6 +33,7 @@
     "@types/koa-router": "^7.4.0",
     "@types/koa__cors": "^3.0.1",
     "@types/mongoose": "^5.7.6",
+    "husky": "^4.2.5",
     "onchange": "^6.1.0",
     "ts-node": "^8.7.0",
     "tslint": "^6.1.0",
@@ -45,5 +47,10 @@
     "nodejs",
     "mongodb",
     "mongoose"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
 }
