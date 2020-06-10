@@ -7,7 +7,7 @@ const router = Router();
 router.prefix('');
 
 router.route({
-  handler: ctx => {
+  handler: (ctx) => {
     ctx.body = {
       response: 'Ok'
     };

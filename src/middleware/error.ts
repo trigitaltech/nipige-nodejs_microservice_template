@@ -4,7 +4,7 @@ export default async (ctx: any, next: any): Promise<void> => {
       ctx.status = 400;
       ctx.body = {
         status: 0,
-        message: ctx.invalid.body.msg,
+        message: ctx.invalid.body.msg
       };
       return;
     }
@@ -13,13 +13,13 @@ export default async (ctx: any, next: any): Promise<void> => {
     if (ctx.status === 401) {
       ctx.body = {
         status: 0,
-        message: err.message,
+        message: err.message
       };
     } else {
       ctx.status = 400;
       ctx.body = {
         status: 0,
-        message: err.message,
+        message: err.message
       };
     }
   }
