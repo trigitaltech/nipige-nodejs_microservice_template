@@ -3,6 +3,5 @@
   "log_level": "LOG_LEVEL",
   "log_output": "LOG_OUTPUT",
   "mongodb_config": "MONGODB_CONFIG",
-  "service_base_url": "SERVICE_BASE_URL",
-  "seed_database": "SEED_DATABASE"
+  "service_base_url": "SERVICE_BASE_URL"
 }

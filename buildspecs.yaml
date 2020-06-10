@@ -8,7 +8,7 @@ phases:
     commands:
       - npm install -g yarn
       - yarn install
-      - yarn compile
+      - yarn build
 
 artifacts:
   files:
