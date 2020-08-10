@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from 'axios';
+import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 import config from 'config';
 
 export default abstract class Service {
@@ -6,10 +6,12 @@ export default abstract class Service {
 
   public api: AxiosInstance;
 
-  constructor() {
-    this.api = axios.create({
-      baseURL: config.get('service_base_url')
-    });
+  constructor(data: AxiosRequestConfig) {
+    const conf: AxiosRequestConfig = {
+      baseURL: config.get('service_base_url'),
+      ...data
+    };
+    this.api = axios.create(conf);
   }
 
   public async get(url: string): Promise<any> {
