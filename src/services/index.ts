@@ -1,5 +1,7 @@
-import TestService from './test';
-import AuthService from './auth';
+/**
+ * Export packages here
+ */
+
 /**
  * Usages
  * import {TestService} from './service'
@@ -11,4 +13,4 @@ import AuthService from './auth';
  *
  */
 
-export { TestService, AuthService };
+export {};

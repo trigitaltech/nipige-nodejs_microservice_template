@@ -8,7 +8,8 @@ export default async () => {
     await mongoose.connect(config.get('mongodb_config'), {
       useFindAndModify: false,
       useNewUrlParser: true,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
+      useCreateIndex: true
     });
     logger.info('Database Connected');
     seedDatabase();

@@ -1,12 +1,22 @@
 import dotenv from 'dotenv';
+
 dotenv.config();
 import Koa from 'koa';
 import config from 'config';
+import { serviceConfig } from '@nipige/authorizer';
 import logger from './utils/logger';
 import routes from './routes';
 import database from './database';
 
-database();
+/**
+ * Configure database initialization
+ */
+database().then();
+
+/**
+ * Configure base url for nipige authorizer library
+ */
+serviceConfig.baseURL = config.get('service_base_url');
 
 const app = new Koa();
 

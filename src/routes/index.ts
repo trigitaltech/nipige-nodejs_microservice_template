@@ -1,17 +1,18 @@
 import Router from 'koa-joi-router';
 import healthCheckRouter from './healthCheck';
+import { handleError } from '../middleware';
 
 const router = Router();
 
-// prefix for microservice
-router.prefix('');
-
 router.route({
-  handler: (ctx) => {
-    ctx.body = {
-      response: 'Ok'
-    };
-  },
+  handler: [
+    handleError,
+    (ctx) => {
+      ctx.body = {
+        response: 'Ok'
+      };
+    }
+  ],
   method: 'GET',
   path: '/'
 });

@@ -1,12 +1,23 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 import config from 'config';
 
+/**
+ * abstract class for service level implementation
+ * example usages:
+ * export default class TestService extends Service {
+ *  public async fetch() {
+ *    const url = `/service2/`;
+ *    return await this.get(url);
+ *  }
+ * }
+ */
+
 export default abstract class Service {
   abstract fetch(params: any): any;
 
   public api: AxiosInstance;
 
-  constructor(data: AxiosRequestConfig) {
+  constructor(data: AxiosRequestConfig = {}) {
     const conf: AxiosRequestConfig = {
       baseURL: config.get('service_base_url'),
       ...data
