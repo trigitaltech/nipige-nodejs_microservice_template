@@ -29,7 +29,8 @@ export default abstract class Service {
     try {
       return await this.api.get(url);
     } catch (err) {
-      throw new Error('Something went wrong');
+      if (err.response) throw new Error(err.response.data);
+      else throw new Error(err.message);
     }
   }
 
@@ -37,7 +38,8 @@ export default abstract class Service {
     try {
       return await this.api.post(url, data);
     } catch (err) {
-      throw new Error('Something went wrong');
+      if (err.response) throw new Error(err.response.data);
+      else throw new Error(err.message);
     }
   }
 }

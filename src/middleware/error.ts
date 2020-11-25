@@ -4,23 +4,18 @@ export default async (ctx: any, next: any): Promise<void> => {
       ctx.status = 400;
       ctx.body = {
         status: 0,
-        message: ctx.invalid.body.msg
+        message: ctx?.invalid?.body?.msg
       };
       return;
     }
     await next();
   } catch (err) {
-    if (ctx.status === 401) {
-      ctx.body = {
-        status: 0,
-        message: err.message
-      };
-    } else {
+    if (ctx.status === 200) {
       ctx.status = 400;
-      ctx.body = {
-        status: 0,
-        message: err.message
-      };
     }
+    ctx.body = {
+      status: 0,
+      message: err.message
+    };
   }
 };
