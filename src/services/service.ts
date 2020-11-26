@@ -13,7 +13,6 @@ import config from 'config';
  */
 
 export default abstract class Service {
-
   public api: AxiosInstance;
 
   constructor(data: AxiosRequestConfig = {}) {
