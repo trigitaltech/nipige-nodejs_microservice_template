@@ -13,7 +13,6 @@ import config from 'config';
  */
 
 export default abstract class Service {
-  abstract fetch(params: any): any;
 
   public api: AxiosInstance;
 

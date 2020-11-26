@@ -13,4 +13,4 @@
  *
  */
 
-export {};
+export { default as PermissionsSeeder } from './seedPermission';
